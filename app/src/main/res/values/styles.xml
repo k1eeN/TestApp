@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="Widget.App.IconButton" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:layout_width">@dimen/size_41</item>
+        <item name="android:layout_height">@dimen/size_40</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Circle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.TestApp.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemBackground">@null</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="fontFamily">@font/root_ui_medium</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App" parent="" />
+    <style name="Widget.App" parent="" />
+
+</resources>

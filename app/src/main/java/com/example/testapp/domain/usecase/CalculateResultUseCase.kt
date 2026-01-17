@@ -2,7 +2,6 @@ package com.example.testapp.domain.usecase
 
 import com.example.testapp.domain.model.QuestionModel
 import com.example.testapp.domain.model.TestResultModel
-import kotlin.math.ceil
 
 class CalculateResultUseCase {
     operator fun invoke(
@@ -11,7 +10,7 @@ class CalculateResultUseCase {
     ): TestResultModel {
         val totalQuestions = questionModels.size
         val maxScore = questionModels.sumOf { it.score }
-        val passingScore = ceil(maxScore * 0.75).toInt()
+        val passingScore = (maxScore * 75 + 99) / 100
         var correctAnswers = 0
         var earnedScore = 0
 

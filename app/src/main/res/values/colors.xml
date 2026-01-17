@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="divider_light_12">#1FFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="surface_dark">#FF1B1B1B</color>
+    <color name="surface_darkest">#0D0D0D</color>
+    <color name="surface_dark_1c">#1C1C1C</color>
+    <color name="surface_dark_1e">#1E1E1E</color>
+    <color name="surface_card">#FF242424</color>
+    <color name="surface_dark_2e">#2E2E2E</color>
+    <color name="surface_chip">#FF2F2F2F</color>
+    <color name="surface_answer">#FF2B2B2B</color>
+    <color name="surface_dark_33">#333333</color>
+    <color name="surface_dark_36">#363636</color>
+    <color name="surface_dark_4a">#4A4A4A</color>
+    <color name="surface_dark_54">#545454</color>
+    <color name="text_primary">#FFF4F4F4</color>
+    <color name="text_secondary">#FFB3B3B3</color>
+    <color name="text_disabled">#BDBDBD</color>
+    <color name="text_secondary_light">#D0D0D0</color>
+    <color name="icon_light">#EBEBEB</color>
+    <color name="accent">#FFE2D35B</color>
+    <color name="accent_gold_light">#E8C15A</color>
+    <color name="accent_orange">#FFB54D</color>
+    <color name="warning">#FFA726</color>
+    <color name="outline">#FF555555</color>
+    <color name="main_background">#1A1A1A</color>
+    <color name="white_70">#70FFFFFF</color>
+    <color name="text_light">#DADADA</color>
+    <color name="text_muted">#BEBEBE</color>
+    <color name="text_hint">#9E9E9E</color>
+    <color name="text_title">#EDEDED</color>
+    <color name="accent_yellow">#F5E76E</color>
+    <color name="accent_gold">#D8B24A</color>
+    <color name="text_body">#AFAFAF</color>
+    <color name="success">#7BDA8A</color>
+    <color name="success_alpha">#257BDA8A</color>
+    <color name="success_light">#DFF5E6</color>
+    <color name="error">#F1314C</color>
+    <color name="overlay_light_10">#10EBEBEB</color>
+    <color name="black_27">#44000000</color>
+    <color name="android_green">#3DDC84</color>
+
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_info"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_12">
+
+    <ImageView
+        android:layout_width="@dimen/size_20"
+        android:layout_height="@dimen/size_20"
+        android:contentDescription="@string/info"
+        android:src="@drawable/ic_info_small"
+        app:tint="@color/accent_gold" />
+
+    <TextView
+        android:id="@+id/unansweredText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_weight="1"
+        android:fontFamily="@font/root_ui_medium"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/text_size_12"
+        tools:text="@string/unanswered_questions_preview" />
+</LinearLayout>

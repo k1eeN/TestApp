@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@android:color/transparent"
+            app:contentInsetEnd="@dimen/size_0"
+            app:contentInsetStart="@dimen/size_0"
+            app:contentInsetStartWithNavigation="@dimen/size_0"
+            app:title="">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_marginStart="@dimen/spacing_16"
+                    android:contentDescription="@string/avatar"
+                    android:src="@drawable/avatar_stub"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size_0"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnInfo"
+                    style="@style/Widget.App.IconButton"
+                    android:contentDescription="@string/info"
+                    android:src="@drawable/ic_info" />
+
+                <ImageButton
+                    android:id="@+id/btnCap"
+                    style="@style/Widget.App.IconButton"
+                    android:layout_marginStart="@dimen/spacing_8"
+                    android:contentDescription="@string/education"
+                    android:src="@drawable/ic_school" />
+
+                <ImageButton
+                    android:id="@+id/btnSearch"
+                    style="@style/Widget.App.IconButton"
+                    android:layout_marginStart="@dimen/spacing_8"
+                    android:contentDescription="@string/search"
+                    android:src="@drawable/ic_search" />
+
+                <ImageButton
+                    android:id="@+id/btnMenu"
+                    style="@style/Widget.App.IconButton"
+                    android:layout_marginStart="@dimen/spacing_8"
+                    android:layout_marginEnd="@dimen/spacing_16"
+                    android:contentDescription="@string/menu"
+                    android:src="@drawable/ic_menu" />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <LinearLayout
+            android:id="@+id/backRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/spacing_16"
+            android:paddingTop="@dimen/spacing_6"
+            android:paddingEnd="@dimen/spacing_16"
+            android:paddingBottom="@dimen/spacing_6">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/icon_size_24"
+                android:layout_height="@dimen/icon_size_24"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/text_light" />
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10"
+                android:fontFamily="@font/root_ui_medium"
+                android:text="@string/back"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingStart="@dimen/spacing_16"
+            android:paddingEnd="@dimen/spacing_16"
+            android:paddingBottom="@dimen/spacing_132">
+
+            <LinearLayout
+                android:id="@+id/scrollContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_6"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_24"
+                            android:layout_height="@dimen/icon_size_24"
+                            android:contentDescription="@string/test"
+                            android:src="@drawable/ic_test"
+                            app:tint="@color/text_muted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_8"
+                            android:fontFamily="@font/root_ui_medium"
+                            android:text="@string/test_tv"
+                            android:textColor="@color/text_muted"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_0"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/chipStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/chip_height"
+                        android:background="@drawable/bg_pill_dark"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/spacing_10"
+                        android:paddingEnd="@dimen/spacing_12">
+
+                        <ImageView
+                            android:id="@+id/ivStatusDot"
+                            android:layout_width="@dimen/icon_size_12"
+                            android:layout_height="@dimen/icon_size_12"
+                            android:layout_marginEnd="@dimen/spacing_8"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_dot" />
+
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/root_ui_medium"
+                            android:text="@string/in_process"
+                            android:textColor="@color/text_light"
+                            android:textSize="@dimen/text_size_13" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_height"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    app:cardBackgroundColor="@color/main_background"
+                    app:cardCornerRadius="@dimen/corner_radius_12"
+                    app:cardElevation="@dimen/size_0">
+
+                    <ImageView
+                        android:id="@+id/ivCover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/cover"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cover_stub" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvDeadlineLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    android:fontFamily="@font/root_ui_medium"
+                    android:text="@string/go_through_to"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_size_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_6"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/chip_height"
+                        android:background="@drawable/bg_pill_dark"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/spacing_12"
+                        android:paddingEnd="@dimen/spacing_12">
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/root_ui_medium"
+                            android:text="@string/time"
+                            android:textColor="@color/text_light"
+                            android:textSize="@dimen/text_size_13" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/chip_height"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:background="@drawable/bg_pill_dark"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/spacing_12"
+                        android:paddingEnd="@dimen/spacing_12">
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/root_ui_medium"
+                            android:text="@string/date"
+                            android:textColor="@color/text_light"
+                            android:textSize="@dimen/text_size_13" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    android:fontFamily="@font/root_ui_medium"
+                    android:text="@string/name_test"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/subtitleRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_6"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSubtitleInfo"
+                        android:layout_width="@dimen/icon_size_16"
+                        android:layout_height="@dimen/icon_size_16"
+                        android:contentDescription="@string/info"
+                        android:src="@drawable/ic_info_small_dop"
+                        app:tint="@color/accent_yellow" />
+
+                    <TextView
+                        android:id="@+id/tvSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_8"
+                        android:fontFamily="@font/root_ui_medium"
+                        android:text="@string/additional_info"
+                        android:textColor="@color/accent_yellow"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_24"
+                        android:layout_height="@dimen/icon_size_24"
+                        android:contentDescription="@string/info"
+                        android:src="@drawable/ic_info_small"
+                        app:tint="@color/accent_gold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_4"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/root_ui_medium"
+                        android:text="@string/additional_info_2"
+                        android:textColor="@color/text_muted"
+                        android:textSize="@dimen/text_size_13" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvRewardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_14"
+                    android:fontFamily="@font/root_ui_medium"
+                    android:text="@string/your_awards"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_size_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_8"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/chipReward1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/chip_height"
+                        android:background="@drawable/bg_pill_dark"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/spacing_10"
+                        android:paddingEnd="@dimen/spacing_12">
+
+                        <ImageView
+                            android:id="@+id/ivReward1"
+                            android:layout_width="@dimen/icon_size_16"
+                            android:layout_height="@dimen/icon_size_16"
+                            android:layout_marginEnd="@dimen/spacing_8"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/text_muted" />
+
+                        <TextView
+                            android:id="@+id/tvReward1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/root_ui_medium"
+                            android:text="@string/reward_points_placeholder"
+                            android:textColor="@color/text_light"
+                            android:textSize="@dimen/text_size_13" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chipReward2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/chip_height"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:background="@drawable/bg_pill_dark"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/spacing_10"
+                        android:paddingEnd="@dimen/spacing_12">
+
+                        <ImageView
+                            android:id="@+id/ivReward2"
+                            android:layout_width="@dimen/icon_size_16"
+                            android:layout_height="@dimen/icon_size_16"
+                            android:layout_marginEnd="@dimen/spacing_8"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_coin"
+                            app:tint="@color/accent_yellow" />
+
+                        <TextView
+                            android:id="@+id/tvReward2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/root_ui_medium"
+                            android:text="@string/reward_coins_placeholder"
+                            android:textColor="@color/text_light"
+                            android:textSize="@dimen/text_size_13" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chipReward3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/chip_height"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:background="@drawable/bg_pill_dark"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/spacing_12"
+                        android:paddingEnd="@dimen/spacing_10">
+
+                        <TextView
+                            android:id="@+id/tvReward3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/root_ui_medium"
+                            android:text="@string/certificate"
+                            android:textColor="@color/text_light"
+                            android:textSize="@dimen/text_size_13" />
+
+                        <ImageView
+                            android:id="@+id/ivReward3Info"
+                            android:layout_width="@dimen/icon_size_16"
+                            android:layout_height="@dimen/icon_size_16"
+                            android:layout_marginStart="@dimen/spacing_8"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_help"
+                            app:tint="@color/text_muted" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/spacing_16"
+                    android:text="@string/text_btn_start"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_background"
+                    app:backgroundTint="@color/accent_yellow"
+                    app:cornerRadius="@dimen/corner_radius_12" />
+
+                <TextView
+                    android:id="@+id/tvBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_14"
+                    android:fontFamily="@font/root_ui_medium"
+                    android:lineSpacingExtra="@dimen/line_spacing"
+                    android:text="@string/description"
+                    android:textColor="@color/text_body"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        style="@style/Widget.TestApp.BottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16"
+        android:layout_marginEnd="@dimen/spacing_16"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_bottom_bar_menu"
+        app:itemIconTint="@drawable/bottom_nav_icon"
+        app:itemTextColor="@drawable/bottom_nav_icon"
+        app:menu="@menu/menu_bottom" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

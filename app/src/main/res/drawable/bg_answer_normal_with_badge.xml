@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:left="@dimen/spacing_8">
+        <shape>
+            <solid android:color="@color/surface_chip" />
+            <corners android:radius="@dimen/spacing_6" />
+            <stroke
+                android:width="@dimen/size_1"
+                android:color="@color/surface_chip" />
+        </shape>
+    </item>
+
+    <item android:gravity="start|center_vertical">
+        <shape>
+            <size android:width="@dimen/icon_size_16" android:height="@dimen/icon_size_16" />
+            <corners android:radius="@dimen/spacing_4" />
+            <solid android:color="@color/surface_chip" />
+            <stroke
+                android:width="@dimen/size_1"
+                android:color="@color/text_secondary" />
+        </shape>
+    </item>
+
+</layer-list>
